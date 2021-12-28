@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bottomSheet"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="16dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center|top"
+        android:id="@+id/view_more_LinearLayout"
+        android:paddingTop="5dp"
+        >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:src="@drawable/round_rec"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Controls"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            />
+
+
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/setStartPointToggleBtn"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center_horizontal"
+        android:textOff="SET STARTPOINT"
+        android:textOn="CANCEL"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_below="@+id/view_more_LinearLayout"
+         />
+
+<!--    <ToggleButton-->
+<!--        android:id="@+id/setWaypointToggleBtn"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginEnd="15dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textOff="SET WAYPOINT"-->
+<!--        android:textOn="CANCEL"-->
+<!--        android:textSize="18sp"-->
+<!--        -->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:layout_toLeftOf="@+id/setStartPointToggleBtn"-->
+<!--        android:visibility="gone"/>-->
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtdirection"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textAlignment="center"
+        android:text="Select Obstacle Direction"
+        android:textSize="18sp"
+        android:layout_below="@+id/setStartPointToggleBtn"
+        android:gravity="center_horizontal"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDDL"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textAlignment="center"
+
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/txtdirection"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        >
+
+        <AutoCompleteTextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:id="@+id/AC_dropdownlistDirection"
+            android:enabled="false"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ToggleButton
+        android:id="@+id/setObstacleToggleBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textAlignment="center"
+        android:textOff="SET OBSTACLE"
+        android:textOn="CANCEL"
+        android:textSize="18sp"
+        android:layout_below="@+id/setObstacleDirectionToggleBtn"
+        android:layout_toRightOf="@+id/txtdirection"
+        android:gravity="center_horizontal"
+        />
+
+    <ToggleButton
+        android:id="@+id/setObstacleDirectionToggleBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textAlignment="center"
+        android:textOff="SET OBSTACLE DIRECTION"
+        android:textOn="CANCEL"
+        android:textSize="18sp"
+        android:layout_toRightOf="@+id/setStartPointToggleBtn"
+        android:layout_below="@+id/view_more_LinearLayout"
+        android:gravity="center_horizontal"
+        />
+
+</RelativeLayout>
